@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
-public class CameraMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [Header("Object references")]
     [SerializeField]
