@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 9e55c74642256d7408003c665c473bc2, type: 3}
   m_Name: Jeff
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueSpeaker
+  m_EditorClassIdentifier: 
   speakerName: Jeff
   emotions:
     list:
     - Key: 0
-      Value: {fileID: 0}
+      Value: {fileID: 2800000, guid: 0b854a2e9198a494fa4ac35ac0c75efc, type: 3}
     - Key: 1
-      Value: {fileID: 0}
+      Value: {fileID: 2800000, guid: de4fad5857017e64c86c2eaac63f6750, type: 3}
