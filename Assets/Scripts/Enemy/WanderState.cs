@@ -13,14 +13,12 @@ public class WanderState : State
 
     public float range;
 
-    // Start is called before the first frame update
     void Start()
     {
         FindNextPoint();
         AddTransition<ChaseState>(() => chasing);
     }
 
-    // Update is called once per frame
     public override void Update()
     {
         if (Vector3.Distance(transform.position, controller.destPos) <= 3.0f)
