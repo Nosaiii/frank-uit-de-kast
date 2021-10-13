@@ -9,6 +9,10 @@ public class ObjectInteract : MonoBehaviour
 
     [SerializeField]
     private Docent docent;
+    [SerializeField]
+    private Inventory inventory;
+    [SerializeField]
+    private InventoryItem requiredItem;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -39,6 +43,8 @@ public class ObjectInteract : MonoBehaviour
 
     public void Interaction()
     {
-        docent.setTeacherFree(true);
+        if (inventory.Contains(requiredItem)) {
+            docent.setTeacherFree(true);
+        }
     }
 }

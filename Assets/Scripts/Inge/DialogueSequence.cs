@@ -50,7 +50,6 @@ public class DialogueSequence : MonoBehaviour {
 
     private void Start() {
         EndDialogue();
-        StartDialogue();
     }
 
     public void Skip(InputAction.CallbackContext context) {

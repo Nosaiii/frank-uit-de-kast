@@ -43,6 +43,9 @@ public class Inventory : MonoBehaviour {
 
     public bool AddItem(InventoryItem item) {
         InventorySlot slot = inventorySlots.FirstOrDefault(inventorySlot => inventorySlot.Item == null);
+        if(Contains(item)) {
+            return false;
+        }
 
         if (slot == null) {
             return false;
@@ -52,6 +55,10 @@ public class Inventory : MonoBehaviour {
         UpdateUI();
 
         return true;
+    }
+
+    public bool Contains(InventoryItem inventoryItem) {
+        return inventorySlots.Select(inventorySlot => inventorySlot.Item).Contains(inventoryItem);
     }
 
     private void UpdateUI() {

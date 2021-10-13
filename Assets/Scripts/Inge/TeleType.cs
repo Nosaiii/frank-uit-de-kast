@@ -12,11 +12,6 @@ public class TeleType : MonoBehaviour
 
     public float speed;
 
-    void Start()
-    {
-        
-    }
-
     private void OnEnable()
     {
         isFirstTime = true;
@@ -52,7 +47,7 @@ public class TeleType : MonoBehaviour
 
             ++counter;
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.03f);
         }
     }
 }
