@@ -1,21 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Docent : MonoBehaviour
 {
 
-    public GameObject wp;
+    public GameObject wayPoint;
     public float walkSpeed;
 
-    private Vector3 destPos;
+    private Vector3 destinationPosition;
     private bool isFreed;
-    private Rigidbody rb;
+    private Rigidbody rigidBody;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        destPos = wp.transform.position;
+        rigidBody = GetComponent<Rigidbody>();
+        destinationPosition = wayPoint.transform.position;
         isFreed = true;
     }
 
@@ -23,7 +21,7 @@ public class Docent : MonoBehaviour
     {
         if (isFreed)
         {
-            rb.MovePosition(Vector3.MoveTowards(transform.position, destPos, walkSpeed * Time.deltaTime));
+            rigidBody.MovePosition(Vector3.MoveTowards(transform.position, destinationPosition, walkSpeed * Time.fixedDeltaTime));
         }
     }
 
