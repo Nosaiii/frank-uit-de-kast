@@ -9,7 +9,7 @@ public class WanderState : State
 
     public GameObject Lantern;
 
-    public bool chasing;
+    private bool chasing;
 
     public float range;
 

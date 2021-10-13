@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ChaseState : State
 {
-    
     void Start()
     {
         AddTransition<WanderState>(() => controller.distanceToPlayer >= maxDistance);
