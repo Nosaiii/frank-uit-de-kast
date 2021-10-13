@@ -8,8 +8,8 @@ public class PlayerInteract : MonoBehaviour
     [HideInInspector]
     public bool interact = false;
 
-    void OnInteract(InputValue val)
+    public void OnInteract(InputAction.CallbackContext context)
     {
-        interact = val.isPressed;
+        interact = context.performed;
     }
 }

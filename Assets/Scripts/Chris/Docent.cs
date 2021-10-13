@@ -14,7 +14,6 @@ public class Docent : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         destinationPosition = wayPoint.transform.position;
-        isFreed = true;
     }
 
     private void FixedUpdate()

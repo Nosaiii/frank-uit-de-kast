@@ -29,8 +29,8 @@ public class WanderState : State
 
     public void FixedUpdate()
     {
-        Debug.DrawRay(Lantern.transform.position, Lantern.transform.forward * range, Color.black);
-        if (Physics.Raycast(Lantern.transform.position, Lantern.transform.forward * range, out RaycastHit hit))
+        Debug.DrawRay(lantern.transform.position, lantern.transform.forward * range, Color.black);
+        if (Physics.Raycast(lantern.transform.position, lantern.transform.forward * range, out RaycastHit hit))
         {
             chasing = hit.collider.CompareTag("Player");
         }
