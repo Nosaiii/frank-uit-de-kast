@@ -32,10 +32,7 @@ public class WanderState : State
         Debug.DrawRay(Lantern.transform.position, Lantern.transform.forward * range, Color.black);
         if (Physics.Raycast(Lantern.transform.position, Lantern.transform.forward * range, out RaycastHit hit))
         {
-            if (hit.collider.CompareTag("Player"))
-            {
-                chasing = true;
-            }
+            chasing = hit.collider.CompareTag("Player");
         }
     }
 
