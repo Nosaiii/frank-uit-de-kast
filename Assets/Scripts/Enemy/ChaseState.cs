@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChaseState : State
 {
+    
     void Start()
     {
         AddTransition<WanderState>(() => controller.distanceToPlayer >= maxDistance);
@@ -11,7 +12,7 @@ public class ChaseState : State
 
     public override void Update()
     {
-        controller.destPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+        controller.destPos = controller.player.transform.position;
         controller.agent.SetDestination(controller.destPos);
     }
 }

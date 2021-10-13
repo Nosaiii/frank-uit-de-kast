@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public float distanceToPlayer;
-    private GameObject player;
+    public GameObject player;
     public NavMeshAgent agent;
     public Vector3 destPos;
 
