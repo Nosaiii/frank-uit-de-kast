@@ -37,7 +37,6 @@ public class PickupInteract : MonoBehaviour
     public void Interaction()
     {
         //placeholder code
-        Debug.Log("pickup");
         Destroy(gameObject);
     }
 }
