@@ -12,18 +12,11 @@ public class Docent : MonoBehaviour
     private bool isFreed;
     private Rigidbody rb;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         destPos = wp.transform.position;
         isFreed = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     private void FixedUpdate()
