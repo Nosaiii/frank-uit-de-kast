@@ -9,12 +9,7 @@ public class EnemyController : MonoBehaviour
     public float distanceToPlayer;
     private GameObject player;
     public NavMeshAgent agent;
-
-
     public Vector3 destPos;
-
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +23,5 @@ public class EnemyController : MonoBehaviour
     {
         distanceToPlayer = Vector3.Distance(gameObject.transform.position, player.transform.position);
         elapsedTime += Time.deltaTime;
-
-     
     }
 }

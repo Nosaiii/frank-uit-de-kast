@@ -13,7 +13,6 @@ public class ChaseState : State
     public override void OnEnable()
     {
         base.OnEnable();
-        
     }
 
     // Update is called once per frame

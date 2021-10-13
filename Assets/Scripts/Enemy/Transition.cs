@@ -7,5 +7,4 @@ public class Transition
 {
     public Func<bool> condition;
     public State target;
-
 }

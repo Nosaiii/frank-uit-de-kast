@@ -11,7 +11,6 @@ public class State : MonoBehaviour
 
     public float maxDistance;
 
-
     public float curRotSpeed;
 
     public float curSpeed;
