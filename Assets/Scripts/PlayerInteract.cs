@@ -9,13 +9,6 @@ public class PlayerInteract : MonoBehaviour
 
     void OnInteract(InputValue val)
     {
-        if (val.isPressed)
-        {
-            interact = true;
-        }
-        else if (!val.isPressed)
-        {
-            interact = false;
-        }
+        interact = val.isPressed;
     }
 }
