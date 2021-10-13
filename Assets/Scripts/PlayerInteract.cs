@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
+    [HideInInspector]
     public bool interact = false;
 
     void OnInteract(InputValue val)
