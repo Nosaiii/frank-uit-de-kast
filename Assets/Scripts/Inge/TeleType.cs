@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System;
 
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class TeleType : MonoBehaviour
 {
     private TextMeshProUGUI m_textMeshPro;
@@ -19,7 +20,7 @@ public class TeleType : MonoBehaviour
     private void OnEnable()
     {
         isFirstTime = true;
-        m_textMeshPro = gameObject.GetComponent<TextMeshProUGUI>() ?? gameObject.AddComponent<TextMeshProUGUI>();
+        m_textMeshPro = gameObject.GetComponent<TextMeshProUGUI>();
 
         StartCoroutine("CoUpdate");
     }
