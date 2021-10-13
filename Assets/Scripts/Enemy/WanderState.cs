@@ -7,7 +7,7 @@ public class WanderState : State
 {
     public GameObject[] waypoints;
 
-    public GameObject Lantern;
+    public GameObject lantern;
 
     private bool chasing;
 
