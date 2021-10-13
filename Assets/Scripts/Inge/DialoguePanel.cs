@@ -7,8 +7,8 @@ using TMPro;
 public class DialoguePanel : MonoBehaviour {
     [Header("Speaker settings")]
     [SerializeField]
-    private Image panelImage;
-    public Image PanelImage => panelImage;
+    private RawImage panelImage;
+    public RawImage PanelImage => panelImage;
     [SerializeField]
     private RawImage rightSpeakerImage;
     public RawImage[] SpeakerImages { get; private set; }
