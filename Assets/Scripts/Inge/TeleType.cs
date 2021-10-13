@@ -9,17 +9,6 @@ public class TeleType : MonoBehaviour
     private TextMeshProUGUI m_textMeshPro;
     private bool isFirstTime;
 
-    // public AudioSource source;
-
-    // [Serializable]
-    // public struct AudioClips
-    // {
-    //     public string text;
-    //     public AudioClip audioClip;
-    // }
-    // [SerializeField]
-    // private List<AudioClips> audioClips;
-
     public float speed;
 
     void Start()
@@ -40,9 +29,7 @@ public class TeleType : MonoBehaviour
         StopCoroutine("CoUpdate");
     }
 
-
-
-    IEnumerator CoUpdate()
+    private IEnumerator CoUpdate()
     {
         if (isFirstTime)
         {
@@ -50,9 +37,7 @@ public class TeleType : MonoBehaviour
             yield return 0;
         }
         
-
         int totalVisibleCharacters = m_textMeshPro.GetParsedText().Length;
-
         int counter = 0;
 
         while (counter < totalVisibleCharacters)

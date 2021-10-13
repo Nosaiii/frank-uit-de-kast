@@ -38,8 +38,9 @@ namespace DialoguePlus.Utility.Maps {
         private Dictionary<TKey, uint> MakeKeyPositions() {
             int numEntries = list.Count;
             Dictionary<TKey, uint> result = new Dictionary<TKey, uint>(numEntries);
-            for (int i = 0; i < numEntries; i++)
+            for (int i = 0; i < numEntries; i++){
                 result[list[i].Key] = (uint)i;
+            }
             return result;
         }
 
@@ -52,8 +53,9 @@ namespace DialoguePlus.Utility.Maps {
         public TValue this[TKey key] {
             get => list[(int)KeyPositions[key]].Value;
             set {
-                if (KeyPositions.TryGetValue(key, out uint index))
+                if (KeyPositions.TryGetValue(key, out uint index)){
                     list[(int)index].SetValue(value);
+                }
                 else {
                     KeyPositions[key] = (uint)list.Count;
                     list.Add(new SerializableKeyValuePair(key, value));
