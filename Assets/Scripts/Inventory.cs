@@ -27,10 +27,10 @@ public class Inventory : MonoBehaviour {
     }
 
     public void OnChangeSelection(InputAction.CallbackContext context) {
-        int numeric = (int)context.ReadValue<float>();
+        int scrollDelta = (int)context.ReadValue<float>();
 
         int oldSelectedIndex = currentItemIndex;
-        currentItemIndex = Mathf.Clamp(numeric, 0, inventorySlots.Length - 1);
+        currentItemIndex = (int) Mathf.Repeat(currentItemIndex + scrollDelta, inventorySlots.Length);
         if (oldSelectedIndex == currentItemIndex) {
             return;
         }
